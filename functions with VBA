@@ -1,0 +1,25 @@
+Sub testfunctions()
+Dim x As Integer
+Dim y As Double
+x = Return1()
+'MsgBox (x)
+
+y = ConvertToCelsius(100)
+MsgBox (100)
+
+End Sub
+
+Function ConvertToCelsius(TempFahrenheit As Double) As Double
+ConvertToCelsius = (TempFahrenheit - 32) * 5 / 9
+End Function
+
+Function Return1() As Integer
+'assign something to the name of the function
+Return1 = 1
+
+End Function
+
+'Take home notes: functions performs something
+'Although the key take home message is that function that you assign must be assined to something
+'pass several parameters to functions
+
