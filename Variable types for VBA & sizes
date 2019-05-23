@@ -1,0 +1,68 @@
+'going through all the types of Variables for VBA
+
+Option Explicit 'This means that all the variables must be declare, i.e. use cons or dim
+
+Sub variables()
+
+' Single line Declaration
+Dim int3 As Integer, int1 As Integer, int2 As Integer, date1 As Date
+    ' different types of assignments can be on the same line
+
+
+Dim int6, int7, int10 As Integer
+    ' in this case int6 and int 7 will be stored (by default) as a variant
+    
+    
+'Constant Variables, for variables that will never change
+'Constant replaces dim, and you can only assign it once
+
+Const num As Integer = 9
+
+' Other types of variables (~10 data types) small to large
+
+    Dim var_byte As Byte 'this can store number 0-255 ---> of Byte Memory
+        var_byte = 255
+        'var_byte = 256 warning this will cause overflow error
+        
+    Dim var_boolean As Boolean 'this can "true" (non-zero), takes up 2 Bytes of Memory up to 555
+        var_boolean = False 'put another number and it will be True
+        
+    Dim var_integer As Integer 'can store numbers -32,768 to 32,767
+        var_integer = 6 'can't have a decimal or it will round according
+        
+    Dim var_long As Long 'this store numbers that are very long ---> 4 butes of memory -2,147,483,648 to 2,147,483,648
+        'when ever you are working on rows and columns, use the Long variable
+        '
+        
+    Dim var_currency As Currency 'Currency - this can store numbers very large -922,337,203,685,477.5808 to -922,337,203,685,477.5808 (8 bytes of memory)
+    
+    
+    Dim var_Double As Single
+    
+    Dim var_single As Double
+    
+    Dim var_date As Date 'store dates January 1, 0100 to December 31, 9999 8 byes of memory
+        var_date = "12/31/999"
+        
+    Dim var_string As String 'this can hold 0 to 2 billion characters ---> 10 Bytes of Memory
+        var_string = "my names is name"
+        
+    Dim variant_string As Variant 'this can store number up to data type double or characters, is flexible '22 bites
+        'important because if you don't declare a variable
+        'every variable that you don't declare will be very big and will slow down your memory
+
+'Naming conventions:
+    'can't use anything that VBA needs to use run or store
+    'no spaces in variables
+    'capatilize start of each word in variable
+    'stay in range of varaible assignment
+    
+'Rmemeber
+    ' declare variables so memory isn't boggeed down
+    ' use dim to declare and choose the correct type
+    
+    
+    
+End Sub
+    
+End Sub
