@@ -1,0 +1,15 @@
+Sub GlobalVariable()
+
+MsgBox ("x in Scope of Variable 1 Module = " & x) 'no value
+MsgBox ("y in Scope of Variable 1 Module = " & y) 'no value
+MsgBox ("z in Scope of Variable 1 Module = " & z) 'no value
+MsgBox ("q in Scope of Variable 1 Module = " & q) 'has values because declared as a global and has been defined in sub 1 (Scope of Variables 1)
+Call Sub2
+
+
+End Sub
+
+'Notes about Variables
+  'when you declare variables as static, memory is stored and takes up space
+  
+  
