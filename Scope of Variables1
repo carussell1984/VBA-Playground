@@ -1,0 +1,32 @@
+Public q As Integer
+Dim z As Integer
+
+Sub Sub1()
+Dim x As Integer
+Static y As Integer
+
+
+x = x + 100
+y = y + 100
+z = z + 100
+q = q + 100
+MsgBox ("x in Sub 1 = " & x) 'dies when sub1 ends
+MsgBox ("y in Sub 1 = " & y) 'lives after sub1 ends but not seen in sub2
+MsgBox ("z in Sub 1 = " & z) 'lives after subs 1 and sub2 ending
+MsgBox ("q in Sub 1 = " & q) 'q lives after sub1 ends and accross modules
+Call Sub2
+Call GlobalVariable
+
+End Sub
+Sub Sub2()
+Dim x As Integer
+Dim y As Integer
+
+
+
+MsgBox ("x in Sub 2 = " & x) ' value
+MsgBox ("y in Sub 2 = " & y) 'no value
+MsgBox ("z in Sub 1 = " & z) 'has a value because delare at the beginning
+MsgBox ("q in Sub 1 = " & q) 'q lives after sub2 ends and accross modules
+
+End Sub
