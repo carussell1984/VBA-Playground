@@ -1,0 +1,22 @@
+Sub MySecondMacro()
+
+'runs myfrist macro
+'parameter is being passed to variable from another sub routine structure to this macro and using the subroutine name
+Call MyFirstMacro("Hello", "World", 909090)
+
+End Sub
+
+Sub MyFirstMacro(strVar As String, strVar2 As String, num As Long) 'strVar is a parameter
+'this is my first macro
+MsgBox (strVar & "-" & strVar2 & "-" & num)
+End Sub
+
+Sub Vars()
+Dim myFirstVariable As Integer
+Dim y As Integer
+
+myFirstVariable = 8
+x = 80
+y = 6000
+
+End Sub
